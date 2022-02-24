@@ -14,5 +14,6 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  dssp = pkgs.callPackage ./pkgs/dssp { };
   mafft = pkgs.callPackage ./pkgs/mafft { };
 }
