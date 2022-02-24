@@ -12,16 +12,13 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ automake autoconf ];
 
-  buildInputs = [ (boost.override { enableStatic = true; taggedLayout = false; }) ];
+  buildInputs = [ boost ];
 
   preConfigure = ''
     ./autogen.sh
   '';
 
-  configureFlags = [
-    "--with-boost-thread=boost_thread"
-    "--with-boost-unit_test_framework=boost_unit_test_framework"
-  ];
+  configureFlags = [ "--with-boost-libdir=${boost.out}/lib" ];
 
   meta = with lib;
     {
