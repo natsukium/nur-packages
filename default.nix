@@ -16,4 +16,5 @@
 
   dssp = pkgs.callPackage ./pkgs/dssp { };
   mafft = pkgs.callPackage ./pkgs/mafft { };
+  psipred = pkgs.callPackage ./pkgs/psipred { };
 }
