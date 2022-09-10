@@ -16,4 +16,6 @@
 
   dssp = pkgs.callPackage ./pkgs/dssp { };
   psipred = pkgs.callPackage ./pkgs/psipred { };
+  hackgen = pkgs.callPackage ./pkgs/data/fonts/hackgen { };
+  hackgen-nf = pkgs.callPackage ./pkgs/data/fonts/hackgen-nf { };
 }
