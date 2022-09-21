@@ -11,4 +11,11 @@ in
       unzip -j $downloadedFile \*.ttf -d $out/share/fonts/hackgen-nf
     '';
     sha256 = "sha256-TsL9xxsZur9kXvb2/49QZ19ovCguVExIoojzMIM/Y/U=";
+
+    meta = with lib; {
+      description = "compoite font of Hack and GenJyuu-Gothic";
+      homepage = "https://github.com/yuru7/HackGen";
+      license = licenses.ofl;
+      platforms = platforms.unix;
+    };
   }
