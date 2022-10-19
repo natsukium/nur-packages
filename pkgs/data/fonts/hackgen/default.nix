@@ -7,8 +7,10 @@ in
     name = "HackGen-${version}";
     url = "https://github.com/yuru7/HackGen/releases/download/v${version}/HackGen_v${version}.zip";
     postFetch = ''
-      mkdir -p $out/share/fonts
-      unzip -j $downloadedFile \*.ttf -d $out/share/fonts/hackgen
+      install -Dm644 $out/*.ttf -t $out/share/fonts/hackgen
+      shopt -s extglob dotglob
+      rm -rf $out/!(share)
+      shopt -u extglob dotglob
     '';
     sha256 = "sha256-UL6U/q2u1UUP31lp0tEnFjzkn6dn8AY6hk5hJhPsOAE=";
 

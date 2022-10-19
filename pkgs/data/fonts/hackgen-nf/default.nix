@@ -7,10 +7,12 @@ in
     name = "HackGen-NF-${version}";
     url = "https://github.com/yuru7/HackGen/releases/download/v${version}/HackGen_NF_v${version}.zip";
     postFetch = ''
-      mkdir -p $out/share/fonts
-      unzip -j $downloadedFile \*.ttf -d $out/share/fonts/hackgen-nf
+      install -Dm644 $out/*.ttf -t $out/share/fonts/hackgen-nf
+      shopt -s extglob dotglob
+      rm -rf $out/!(share)
+      shopt -u extglob dotglob
     '';
-    sha256 = "sha256-TsL9xxsZur9kXvb2/49QZ19ovCguVExIoojzMIM/Y/U=";
+    sha256 = "sha256-9sylGr37kKIGWgThZFqL2y6oI3t2z4kbXYk5DBMIb/g=";
 
     meta = with lib; {
       description = "compoite font of Hack and GenJyuu-Gothic";
