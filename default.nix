@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   dssp = pkgs.callPackage ./pkgs/dssp { };
+  ligaturizer = pkgs.callPackage ./pkgs/ligaturizer { };
   psipred = pkgs.callPackage ./pkgs/psipred { };
   hackgen = pkgs.callPackage ./pkgs/data/fonts/hackgen { };
   hackgen-nf = pkgs.callPackage ./pkgs/data/fonts/hackgen-nf { };
