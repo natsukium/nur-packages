@@ -25,4 +25,6 @@
   hackgen-nf = pkgs.callPackage ./pkgs/data/fonts/hackgen-nf { };
   liga-hackgen-font = pkgs.callPackage ./pkgs/data/fonts/liga-hackgen { };
   liga-hackgen-nf-font = pkgs.callPackage ./pkgs/data/fonts/liga-hackgen/nerdfont.nix { };
+
+  vimPlugins = pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/vim-plugins { inherit (pkgs.vimUtils) buildVimPlugin; });
 }
