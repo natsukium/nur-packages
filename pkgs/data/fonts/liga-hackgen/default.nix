@@ -6,14 +6,17 @@
   hackgen-nf-font,
   ligaturizer,
 }: let
+  ligaturizer' = ligaturizer.overrideAttrs (_: {
+    patches = [./ligature.patch];
+  });
   family =
     if nerdfont
     then "hackgen-nf"
     else "hackgen";
 in
-    version = "0.0.1";
   stdenv.mkDerivation {
     pname = "liga-${family}-font";
+    version = "0.1.0";
     src = "${
       if nerdfont
       then hackgen-nf-font
@@ -25,7 +28,7 @@ in
 
       mkdir -p $out/share/fonts/liga-${family}
       for font in $(ls $src); do
-        ${ligaturizer}/bin/ligaturizer $src/$font --output-dir=$out/share/fonts/liga-${family} --prefix="Liga"
+        ${ligaturizer'}/bin/ligaturizer $src/$font --output-dir=$out/share/fonts/liga-${family} --prefix="Liga"
       done
 
       runHook postInstall
