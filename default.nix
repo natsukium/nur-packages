@@ -17,9 +17,6 @@
   colima = pkgs.callPackage ./pkgs/colima { };
   copyq = pkgs.callPackage ./pkgs/copyq { };
   ligaturizer = pkgs.callPackage ./pkgs/ligaturizer { };
-  mmseqs2 = pkgs.callPackage ./pkgs/mmseqs2 {
-    inherit (pkgs.llvmPackages) openmp;
-  };
   nixpkgs-review = pkgs.callPackage ./pkgs/nixpkgs-review { };
   nowplaying-cli = pkgs.callPackage ./pkgs/nowplaying-cli { 
     inherit (pkgs.darwin.apple_sdk.frameworks) Cocoa;
