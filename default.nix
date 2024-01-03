@@ -14,6 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  colima = pkgs.callPackage ./pkgs/colima { };
   copyq = pkgs.callPackage ./pkgs/copyq { };
   doq = pkgs.python3Packages.callPackage ./pkgs/doq { };
   ligaturizer = pkgs.callPackage ./pkgs/ligaturizer { };
