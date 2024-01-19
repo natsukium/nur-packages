@@ -9,7 +9,20 @@ let
   nurAttrs = import ./default.nix { pkgs = super; };
 
 in
-builtins.listToAttrs
-  (map (n: nameValuePair n nurAttrs.${n})
-    (builtins.filter (n: !isReserved n)
-      (builtins.attrNames nurAttrs)))
+# builtins.listToAttrs
+#   (map (n: nameValuePair n nurAttrs.${n})
+#     (builtins.filter (n: !isReserved n)
+#       (builtins.attrNames nurAttrs)))
+{
+colima = super.colima.overrideAttrs (finalAttrs: prevAttrs: {
+  version = prevAttrs.version + "-1";
+  name = "${prevAttrs.pname}-${finalAttrs.version}";
+  postPatch =
+    super.lib.optionalString super.stdenv.isDarwin (prevAttrs.postPatch or "")
+    + ''
+      substituteInPlace config/dirs.go \
+        --replace '"github.com/abiosoft/colima/util"' "" \
+        --replace " || util.MacOS()" ""
+    '';
+});
+}
