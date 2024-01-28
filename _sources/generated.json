@@ -69,6 +69,21 @@
         },
         "version": "1.2.1"
     },
+    "qmk-toolbox": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "qmk-toolbox",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-dfQ5qdkWMNIxCWhWa7cDMGzrpHl/m1RZsSaVFL56Ytg=",
+            "type": "url",
+            "url": "https://github.com/qmk/qmk_toolbox/releases/download/0.2.2/QMK.Toolbox.app.zip"
+        },
+        "version": "0.2.2"
+    },
     "qutebrowser-darwin": {
         "cargoLocks": null,
         "date": null,
