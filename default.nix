@@ -38,6 +38,9 @@ rec {
   liga-hackgen-nf-font = liga-hackgen-font.override { nerdfont = true; };
 
   vimPlugins = pkgs.recurseIntoAttrs (
-    pkgs.callPackage ./pkgs/vim-plugins { inherit (pkgs.vimUtils) buildVimPlugin; }
+    pkgs.callPackage ./pkgs/vim-plugins {
+      inherit (pkgs.vimUtils) buildVimPlugin;
+      inherit sources;
+    }
   );
 }
