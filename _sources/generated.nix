@@ -41,6 +41,14 @@
       sha256 = "sha256-u0kSPGYoK2SVwkVYkxOvyUh1p7DoLJrp951vJedQPbQ=";
     };
   };
+  qmk-toolbox = {
+    pname = "qmk-toolbox";
+    version = "0.2.2";
+    src = fetchurl {
+      url = "https://github.com/qmk/qmk_toolbox/releases/download/0.2.2/QMK.Toolbox.app.zip";
+      sha256 = "sha256-dfQ5qdkWMNIxCWhWa7cDMGzrpHl/m1RZsSaVFL56Ytg=";
+    };
+  };
   qutebrowser-darwin = {
     pname = "qutebrowser-darwin";
     version = "3.1.0";
