@@ -23,15 +23,15 @@
   };
   nixfmt = {
     pname = "nixfmt";
-    version = "2b5ee820690bae64cb4003e46917ae43541e3e0b";
+    version = "136005fc3dd34ff0d6af9f8c57cd1d3d7d342537";
     src = fetchFromGitHub {
-      owner = "piegamesde";
+      owner = "NixOS";
       repo = "nixfmt";
-      rev = "2b5ee820690bae64cb4003e46917ae43541e3e0b";
+      rev = "136005fc3dd34ff0d6af9f8c57cd1d3d7d342537";
       fetchSubmodules = false;
-      sha256 = "sha256-D8OYHmW3BiOfv7HSjBqihfqBihraeE7jdac9ggNbMsQ=";
+      sha256 = "sha256-g0MTMQZeRlKFQiKdEVc1IQ73nNeRwu0+GtUIvcm2NV4=";
     };
-    date = "2024-03-01";
+    date = "2024-03-15";
   };
   nixpkgs-review = {
     pname = "nixpkgs-review";
