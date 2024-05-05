@@ -83,15 +83,15 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "438b9d22d926569db6e6034e0d333edce5f4d4cf";
+    version = "87ad1d1f594e592ecad0429d651be45ce5fb03da";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "438b9d22d926569db6e6034e0d333edce5f4d4cf";
+      rev = "87ad1d1f594e592ecad0429d651be45ce5fb03da";
       fetchSubmodules = false;
-      sha256 = "sha256-jXPMDxiyJ3w4cpRgonlXjdmSJHsnkLhG6NeBjYjeKeo=";
+      sha256 = "sha256-7qPFVnNzBgkQMD73JEhYEXxCWuGROzH8pjfPQpKwf0I=";
     };
-    date = "2024-03-21";
+    date = "2024-05-04";
   };
   vim-startuptime = {
     pname = "vim-startuptime";
