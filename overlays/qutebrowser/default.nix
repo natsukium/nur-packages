@@ -29,11 +29,6 @@ final: prev: {
           cp -R . "$out/Applications/qutebrowser.app"
         '';
 
-        meta = with prev.lib; {
-          description = "Keyboard-focused browser with a minimal GUI";
-          homepage = "https://github.com/qutebrowser/qutebrowser";
-          license = licenses.gpl3;
-          platforms = platforms.darwin;
-        };
+        inherit (prev.qutebrowser) meta;
       };
 }

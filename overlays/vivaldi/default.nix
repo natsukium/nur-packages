@@ -1,7 +1,16 @@
-final: prev: {
+final: prev:
+let
+  meta = prev.vivaldi.meta // {
+    description = "A Browser for our Friends powerful and personal";
+    platforms = prev.vivaldi.meta.platforms ++ prev.lib.platforms.darwin;
+  };
+in
+{
   vivaldi =
     if prev.stdenv.hostPlatform.isLinux then
-      prev.vivaldi
+      prev.vivaldi.overrideAttrs (_: {
+        inherit meta;
+      })
     else
       let
         source =
@@ -44,12 +53,6 @@ final: prev: {
           runHook postInstall
         '';
 
-        meta = with prev.lib; {
-          description = "A Browser for our Friends powerful and personal";
-          homepage = "https://vivaldi.com";
-          license = licenses.unfree;
-          platforms = platforms.darwin;
-          maintainers = with maintainers; [ natsukium ];
-        };
+        inherit meta;
       };
 }
