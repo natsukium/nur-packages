@@ -1,7 +1,15 @@
-final: prev: {
+final: prev:
+let
+  meta = prev.copyq.meta // {
+    platforms = prev.copyq.meta.platforms ++ [ "aarch64-darwin" ];
+  };
+in
+{
   copyq =
     if prev.stdenv.hostPlatform.isLinux then
-      prev.copyq
+      prev.copyq.overrideAttrs (_: {
+        inherit meta;
+      })
     else
       let
         source =
@@ -37,11 +45,6 @@ final: prev: {
           cp -R . $out/Applications/CopyQ.app
         '';
 
-        meta = with prev.lib; {
-          homepage = "https://hluk.github.io/CopyQ";
-          description = "Clipboard Manager with Advanced Features";
-          license = licenses.gpl3Only;
-          platforms = [ "aarch64-darwin" ];
-        };
+        inherit meta;
       };
 }
