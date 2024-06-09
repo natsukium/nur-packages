@@ -36,7 +36,7 @@ rec {
   rofi-rbw = pkgs.rofi-rbw;
   sbarlua = pkgs.callPackage ./pkgs/sbarlua { source = sources.sbarlua; };
   vim-startuptime = pkgs.callPackage ./pkgs/vim-startuptime { source = sources.vim-startuptime; };
-  vivaldi-bin = pkgs.vivaldi;
+  vivaldi = pkgs.vivaldi;
   liga-hackgen-font = pkgs.callPackage ./pkgs/data/fonts/liga-hackgen { inherit ligaturizer; };
   liga-hackgen-nf-font = liga-hackgen-font.override { nerdfont = true; };
 
