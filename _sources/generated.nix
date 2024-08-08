@@ -11,27 +11,27 @@
   };
   emacs-plus = {
     pname = "emacs-plus";
-    version = "323d86b2685a2420341e648bbc6c7b7c02029fa9";
+    version = "ff462afe5e971411e9738305ac6afd67a0e041bb";
     src = fetchFromGitHub {
       owner = "d12frosted";
       repo = "homebrew-emacs-plus";
-      rev = "323d86b2685a2420341e648bbc6c7b7c02029fa9";
+      rev = "ff462afe5e971411e9738305ac6afd67a0e041bb";
       fetchSubmodules = false;
-      sha256 = "sha256-jKTOwbm0cNp8D5pinF4wtn5beQRlLmsnClg+8ooDkX0=";
+      sha256 = "sha256-wjimri+UcqSSiCO3nNU/3wdxuXW3p3LB6nZvoJnKssc=";
     };
-    date = "2024-07-15";
+    date = "2024-08-05";
   };
   nixfmt = {
     pname = "nixfmt";
-    version = "e819b2d0f9173f0c73d2e1fb4bc5155362046653";
+    version = "2d79e0fdb5a83253b4598dd2e33810cf08754ffb";
     src = fetchFromGitHub {
       owner = "NixOS";
       repo = "nixfmt";
-      rev = "e819b2d0f9173f0c73d2e1fb4bc5155362046653";
+      rev = "2d79e0fdb5a83253b4598dd2e33810cf08754ffb";
       fetchSubmodules = false;
-      sha256 = "sha256-cmgmVWjNkXBOt3r5bzuVLk/+xv4TzcvcQ16W8kOmx90=";
+      sha256 = "sha256-El0VPRi2JFqyw4SeZUyEhGbqzPybkk15Jg/6pqBPA+A=";
     };
-    date = "2024-07-18";
+    date = "2024-08-08";
   };
   nixpkgs-review = {
     pname = "nixpkgs-review";
@@ -75,15 +75,15 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "0e5a7dc5984e6043ee6d3af81e0d8dbb554dca70";
+    version = "a3b59a5ebbad5fc19ec798d6f5ab248f9d7d175c";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "0e5a7dc5984e6043ee6d3af81e0d8dbb554dca70";
+      rev = "a3b59a5ebbad5fc19ec798d6f5ab248f9d7d175c";
       fetchSubmodules = false;
-      sha256 = "sha256-19EhjCjMdoKndkEMQG3PSvA9il+XLno8QO1FBsy3Cpo=";
+      sha256 = "sha256-2QHMjAg9dtqqu4E5B3KLT0FnZfv9vhSKmr9hX7+Gkdc=";
     };
-    date = "2024-07-24";
+    date = "2024-08-01";
   };
   vim-startuptime = {
     pname = "vim-startuptime";
@@ -95,10 +95,10 @@
   };
   vivaldi-darwin = {
     pname = "vivaldi-darwin";
-    version = "6.8.3381.48";
+    version = "6.8.3381.53";
     src = fetchurl {
-      url = "https://downloads.vivaldi.com/stable/Vivaldi.6.8.3381.48.universal.dmg";
-      sha256 = "sha256-iZLfbMUodorVf2ITQeNnBBfzmZnwDmKOo2Sy+XbrTjQ=";
+      url = "https://downloads.vivaldi.com/stable/Vivaldi.6.8.3381.53.universal.dmg";
+      sha256 = "sha256-2zkabrQ/em++RvHHNts4nDe8dzt7zbQcp96we5OiLeg=";
     };
   };
 }
