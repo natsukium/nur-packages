@@ -20,7 +20,6 @@ rec {
   overlays = import ./overlays; # nixpkgs overlays
 
   bclm = pkgs.callPackage ./pkgs/bclm { };
-  colima = pkgs.colima;
   copyq = pkgs.copyq;
   emacs-plus = pkgs.callPackage ./pkgs/emacs-plus { source = sources.emacs-plus; };
   ligaturizer = pkgs.callPackage ./pkgs/ligaturizer { };

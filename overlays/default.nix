@@ -1,5 +1,4 @@
 {
-  colima = import ./colima;
   copyq = import ./copyq;
   nixfmt = import ./nixfmt;
   nixpkgs-review = import ./nixpkgs-review;
