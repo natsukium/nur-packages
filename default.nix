@@ -23,7 +23,6 @@ rec {
   copyq = pkgs.copyq;
   emacs-plus = pkgs.callPackage ./pkgs/emacs-plus { source = sources.emacs-plus; };
   ligaturizer = pkgs.callPackage ./pkgs/ligaturizer { };
-  nixfmt = pkgs.nixfmt;
   nixpkgs-review = pkgs.nixpkgs-review;
   psipred = pkgs.callPackage ./pkgs/psipred { };
   qmk-toolbox = pkgs.callPackage ./pkgs/qmk-toolbox { source = sources.qmk-toolbox; };
