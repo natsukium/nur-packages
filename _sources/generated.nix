@@ -21,18 +21,6 @@
     };
     date = "2024-07-15";
   };
-  nixfmt = {
-    pname = "nixfmt";
-    version = "e819b2d0f9173f0c73d2e1fb4bc5155362046653";
-    src = fetchFromGitHub {
-      owner = "NixOS";
-      repo = "nixfmt";
-      rev = "e819b2d0f9173f0c73d2e1fb4bc5155362046653";
-      fetchSubmodules = false;
-      sha256 = "sha256-cmgmVWjNkXBOt3r5bzuVLk/+xv4TzcvcQ16W8kOmx90=";
-    };
-    date = "2024-07-18";
-  };
   nixpkgs-review = {
     pname = "nixpkgs-review";
     version = "8e8f6f97a8259728f7bdbe8ca0aaec87d5f33cc9";
