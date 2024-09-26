@@ -54,10 +54,10 @@ jobs:
           --option restrict-eval true \
           --option allow-import-from-derivation true \
           --drv-path --show-trace \
-          -I nixpkgs=$(nix-instantiate --find-file nixpkgs) \
+          -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/$(nix run nixpkgs#jq -- -r '.nodes.nixpkgs.locked.rev' flake.lock).tar.gz \
           -I $PWD
     - name: Build nix packages
-      run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
+      run: nix shell --impure nixpkgs#nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/$(nix run nixpkgs#jq -- -r '.nodes.nixpkgs.locked.rev' flake.lock).tar.gz
     - name: Trigger NUR update
       # Don't replace <YOUR_REPO_NAME> here!
       if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
