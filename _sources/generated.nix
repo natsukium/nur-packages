@@ -43,10 +43,10 @@
   };
   qutebrowser-darwin = {
     pname = "qutebrowser-darwin";
-    version = "3.3.1";
+    version = "3.4.0";
     src = fetchurl {
-      url = "https://github.com/qutebrowser/qutebrowser/releases/download/v3.3.1/qutebrowser-3.3.1-arm64.dmg";
-      sha256 = "sha256-09E0wYS/EsjRE56sDK6iQBOGUsCdGKzT/4AY+qxkqok=";
+      url = "https://github.com/qutebrowser/qutebrowser/releases/download/v3.4.0/qutebrowser-3.4.0-arm64.dmg";
+      sha256 = "sha256-H5u8q/wjwlx5pw/S14wVe2+TExioD6PgcZZhdXobXqE=";
     };
   };
   sbarlua = {
@@ -63,15 +63,15 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "2cdd414c1bfa8c363505b8dfc9f50ef2f446ea61";
+    version = "b86773f1a0d312f6ce9cb16996fdcebde8473680";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "2cdd414c1bfa8c363505b8dfc9f50ef2f446ea61";
+      rev = "b86773f1a0d312f6ce9cb16996fdcebde8473680";
       fetchSubmodules = false;
-      sha256 = "sha256-7oTJGGkUb3K8nzcPqlJrm316ECmgswy/+N8cTQghv3k=";
+      sha256 = "sha256-8dYw+26FCIpA6DnshiJFuHwJbWDxWwirUgttUPPcUaQ=";
     };
-    date = "2024-10-14";
+    date = "2024-12-17";
   };
   vivaldi-darwin = {
     pname = "vivaldi-darwin";
