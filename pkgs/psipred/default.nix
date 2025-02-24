@@ -22,6 +22,8 @@ stdenv.mkDerivation rec {
 
   # patches = [ ./runpsipredplus.patch ];
 
+  env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-int";
+
   preBuild = ''
     cd ./src
   '';
