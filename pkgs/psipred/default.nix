@@ -1,4 +1,11 @@
-{ lib, stdenv, fetchgit, blast, tcsh, dbPath ? "uniref90"}:
+{
+  lib,
+  stdenv,
+  fetchgit,
+  blast,
+  tcsh,
+  dbPath ? "uniref90",
+}:
 
 stdenv.mkDerivation rec {
   pname = "psipred";
@@ -10,7 +17,10 @@ stdenv.mkDerivation rec {
     sha256 = "1frxpnrxkhj968k0w6r4npsn5g0jjd0bx6wmb68yqbqkns1qfrgf";
   };
 
-  buildInputs = [ blast tcsh ];
+  buildInputs = [
+    blast
+    tcsh
+  ];
 
   prePatch = ''
     substituteInPlace ./BLAST+/runpsipredplus \
@@ -34,9 +44,7 @@ stdenv.mkDerivation rec {
     cp -r ../data $out/
   '';
 
-
-  meta = with lib;
-  {
+  meta = with lib; {
     description = "Protein Secondary Structure Predictor";
     homepage = "http://bioinf.cs.ucl.ac.uk/psipred";
     license = licenses.boost;
