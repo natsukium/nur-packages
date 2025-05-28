@@ -2,6 +2,7 @@ name: "Update flake and create PR"
 on:
   schedule:
     - cron:  '0 19 * * 6'
+  workflow_dispatch:
 jobs:
   updates:
     runs-on: ubuntu-latest
