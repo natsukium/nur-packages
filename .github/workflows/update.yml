@@ -35,6 +35,7 @@ jobs:
         author: actions-user <action@github.com>
         commit-message: "update source"
         title: "update source"
+        branch: update-nvfetcher
     - name: Enable auto-merge
       if: steps.cpr.outputs.pull-request-number
       run: |
