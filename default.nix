@@ -20,7 +20,6 @@ rec {
   overlays = import ./overlays; # nixpkgs overlays
 
   age-plugin-se = pkgs.callPackage ./pkgs/age-plugin-se { source = sources.age-plugin-se; };
-  bclm = pkgs.callPackage ./pkgs/bclm { };
   copyq = pkgs.copyq;
   emacs-plus = pkgs.callPackage ./pkgs/emacs-plus { source = sources.emacs-plus; };
   google-japanese-input = pkgs.callPackage ./pkgs/google-japanese-input { };
