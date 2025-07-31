@@ -35,6 +35,26 @@
         },
         "version": "3e95d573d5f13aba7808193b66312b38a7c66851"
     },
+    "firefox-addons": {
+        "cargoLocks": null,
+        "date": "2025-07-29",
+        "extract": null,
+        "name": "firefox-addons",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "b657cfddb78408e9b53b4a8aaeaac71fc7ea182e",
+            "sha256": "sha256-FE908x/ihUlr5yn1f+PTMyOjcwotGUodzn7Ej6zZf5U=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://gitlab.com/rycee/nur-expressions"
+        },
+        "version": "b657cfddb78408e9b53b4a8aaeaac71fc7ea182e"
+    },
     "hammerspoon": {
         "cargoLocks": null,
         "date": null,
