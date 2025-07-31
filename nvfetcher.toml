@@ -8,6 +8,11 @@ src.git = "https://github.com/d12frosted/homebrew-emacs-plus"
 src.branch = "master"
 fetch.github = "d12frosted/homebrew-emacs-plus"
 
+[firefox-addons]
+src.git = "https://gitlab.com/rycee/nur-expressions"
+src.branch = "master"
+fetch.git = "https://gitlab.com/rycee/nur-expressions"
+
 [hammerspoon]
 src.github = "Hammerspoon/hammerspoon"
 fetch.url = "https://github.com/Hammerspoon/hammerspoon/releases/download/$ver/Hammerspoon-$ver.zip"
