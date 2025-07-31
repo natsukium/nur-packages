@@ -35,7 +35,7 @@ rec {
   liga-hackgen-font = pkgs.callPackage ./pkgs/data/fonts/liga-hackgen { inherit ligaturizer; };
   liga-hackgen-nf-font = liga-hackgen-font.override { nerdfont = true; };
 
-  firefox-addons = pkgs.recurseIntoAttrs (
+  my-firefox-addons = pkgs.recurseIntoAttrs (
     pkgs.callPackage ./pkgs/firefox-addons {
       inherit (pkgs.callPackage "${sources.firefox-addons.src}/pkgs/firefox-addons" { })
         buildFirefoxXpiAddon
