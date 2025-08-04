@@ -11,15 +11,15 @@
   };
   emacs-plus = {
     pname = "emacs-plus";
-    version = "3e95d573d5f13aba7808193b66312b38a7c66851";
+    version = "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab";
     src = fetchFromGitHub {
       owner = "d12frosted";
       repo = "homebrew-emacs-plus";
-      rev = "3e95d573d5f13aba7808193b66312b38a7c66851";
+      rev = "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab";
       fetchSubmodules = false;
-      sha256 = "sha256-Eepinxv05Yl79AoPVJveGDZPKHhlAes7XtUvrssflrU=";
+      sha256 = "sha256-BT0XP4/PUq1n7eboeoMD0POq+wps1dUkKpiBFvjwBjI=";
     };
-    date = "2025-03-31";
+    date = "2025-08-04";
   };
   firefox-addons = {
     pname = "firefox-addons";
@@ -97,15 +97,15 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "4412cfb90cd4dab8c03d8df88660f857fad370c2";
+    version = "882e62aa30b7d94d88088e9dfc6959f211a1a0e1";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "4412cfb90cd4dab8c03d8df88660f857fad370c2";
+      rev = "882e62aa30b7d94d88088e9dfc6959f211a1a0e1";
       fetchSubmodules = false;
-      sha256 = "sha256-qPV/MsDrTMzcJNilSFRNqmu1VZnGLaRliheeZitZ/eo=";
+      sha256 = "sha256-uc9kFNWJM+r6eZGY9t+ON3uj3WG58CNkBHOJc8sJnLQ=";
     };
-    date = "2025-07-25";
+    date = "2025-08-05";
   };
   vivaldi-darwin = {
     pname = "vivaldi-darwin";
