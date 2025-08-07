@@ -23,17 +23,17 @@
   };
   firefox-addons = {
     pname = "firefox-addons";
-    version = "27c945a6450d42c62f7e41019d7931b426bb786f";
+    version = "2008f9aa7a5ccde48bfc1de5a919be5898da09c2";
     src = fetchgit {
       url = "https://gitlab.com/rycee/nur-expressions";
-      rev = "27c945a6450d42c62f7e41019d7931b426bb786f";
+      rev = "2008f9aa7a5ccde48bfc1de5a919be5898da09c2";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-6foT7Sflve4XuLnBKkgN9b9IP4FvdoBA2XQ2IyXmbog=";
+      sha256 = "sha256-gXE5lTYMOhpDJo+siLXW/3BzySPmLMD12GVB1QFVbyw=";
     };
-    date = "2025-08-02";
+    date = "2025-08-06";
   };
   hammerspoon = {
     pname = "hammerspoon";
