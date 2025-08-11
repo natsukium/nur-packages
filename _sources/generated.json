@@ -165,7 +165,7 @@
     },
     "skkeleton": {
         "cargoLocks": null,
-        "date": "2025-08-05",
+        "date": "2025-08-11",
         "extract": null,
         "name": "skkeleton",
         "passthru": null,
@@ -177,12 +177,12 @@
             "name": null,
             "owner": "vim-skk",
             "repo": "skkeleton",
-            "rev": "5ddb49351854fb5c3406c071a82d2f50612afcf3",
-            "sha256": "sha256-W0EdS/3QAykPN55MvO1VKrsWxEI807bzxgQgfS9UBqk=",
+            "rev": "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955",
+            "sha256": "sha256-8fBcIGFV3F3q1Nj6xopZOVdhN14Vd51Gm+g0L07xlyI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5ddb49351854fb5c3406c071a82d2f50612afcf3"
+        "version": "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955"
     },
     "vivaldi-darwin": {
         "cargoLocks": null,
@@ -208,10 +208,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-mCVet8rbaccdV6e26ELJZflQSQyjd3Ix+ZPfPaMbwes=",
+            "sha256": "sha256-GDGmr92WWf6jM47c/AEO7aRljVKqRzjqXcepDK4s9K0=",
             "type": "url",
-            "url": "https://github.com/zen-browser/desktop/releases/download/1.14.10b/zen.macos-universal.dmg"
+            "url": "https://github.com/zen-browser/desktop/releases/download/1.14.11b/zen.macos-universal.dmg"
         },
-        "version": "1.14.10b"
+        "version": "1.14.11b"
     }
 }
