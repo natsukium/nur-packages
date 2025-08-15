@@ -16,7 +16,7 @@
     },
     "emacs-plus": {
         "cargoLocks": null,
-        "date": "2025-08-04",
+        "date": "2025-08-15",
         "extract": null,
         "name": "emacs-plus",
         "passthru": null,
@@ -28,16 +28,16 @@
             "name": null,
             "owner": "d12frosted",
             "repo": "homebrew-emacs-plus",
-            "rev": "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab",
-            "sha256": "sha256-BT0XP4/PUq1n7eboeoMD0POq+wps1dUkKpiBFvjwBjI=",
+            "rev": "e5d826e81b5997cbfe73c183617a9cba1af2431d",
+            "sha256": "sha256-vvKlb/NljA5JR98AYLgN/JI8U7jIefiz8lb4y9E4YSI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab"
+        "version": "e5d826e81b5997cbfe73c183617a9cba1af2431d"
     },
     "firefox-addons": {
         "cargoLocks": null,
-        "date": "2025-08-12",
+        "date": "2025-08-15",
         "extract": null,
         "name": "firefox-addons",
         "passthru": null,
@@ -47,13 +47,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "170f218715e93fc36a9077a926eb8516d789138b",
-            "sha256": "sha256-5Q7o8nv1EQi7oYD1k1F8/d+3WUiNDg9JOH8KWgP/6WQ=",
+            "rev": "e6c2e889b34f5f623a7749a46e2aa5ea6e7256a0",
+            "sha256": "sha256-KVPjWo/RVQBQe6N03cNbSVM/xNCv2506wE4A8wL73sk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/rycee/nur-expressions"
         },
-        "version": "170f218715e93fc36a9077a926eb8516d789138b"
+        "version": "e6c2e889b34f5f623a7749a46e2aa5ea6e7256a0"
     },
     "hammerspoon": {
         "cargoLocks": null,
@@ -165,7 +165,7 @@
     },
     "skkeleton": {
         "cargoLocks": null,
-        "date": "2025-08-11",
+        "date": "2025-08-15",
         "extract": null,
         "name": "skkeleton",
         "passthru": null,
@@ -177,12 +177,12 @@
             "name": null,
             "owner": "vim-skk",
             "repo": "skkeleton",
-            "rev": "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955",
-            "sha256": "sha256-8fBcIGFV3F3q1Nj6xopZOVdhN14Vd51Gm+g0L07xlyI=",
+            "rev": "995c2e4581e0250a5b26f0e09293a96cae925cea",
+            "sha256": "sha256-3ZGpwE8zv/A1Mg57R7CgjwT8FHYBnxhTUcGH5rKf7Ag=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955"
+        "version": "995c2e4581e0250a5b26f0e09293a96cae925cea"
     },
     "vivaldi-darwin": {
         "cargoLocks": null,
