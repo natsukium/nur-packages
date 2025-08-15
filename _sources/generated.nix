@@ -11,29 +11,29 @@
   };
   emacs-plus = {
     pname = "emacs-plus";
-    version = "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab";
+    version = "e5d826e81b5997cbfe73c183617a9cba1af2431d";
     src = fetchFromGitHub {
       owner = "d12frosted";
       repo = "homebrew-emacs-plus";
-      rev = "cd8d57de9ac25d9822567ea4d51d5c67d791d7ab";
+      rev = "e5d826e81b5997cbfe73c183617a9cba1af2431d";
       fetchSubmodules = false;
-      sha256 = "sha256-BT0XP4/PUq1n7eboeoMD0POq+wps1dUkKpiBFvjwBjI=";
+      sha256 = "sha256-vvKlb/NljA5JR98AYLgN/JI8U7jIefiz8lb4y9E4YSI=";
     };
-    date = "2025-08-04";
+    date = "2025-08-15";
   };
   firefox-addons = {
     pname = "firefox-addons";
-    version = "170f218715e93fc36a9077a926eb8516d789138b";
+    version = "e6c2e889b34f5f623a7749a46e2aa5ea6e7256a0";
     src = fetchgit {
       url = "https://gitlab.com/rycee/nur-expressions";
-      rev = "170f218715e93fc36a9077a926eb8516d789138b";
+      rev = "e6c2e889b34f5f623a7749a46e2aa5ea6e7256a0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-5Q7o8nv1EQi7oYD1k1F8/d+3WUiNDg9JOH8KWgP/6WQ=";
+      sha256 = "sha256-KVPjWo/RVQBQe6N03cNbSVM/xNCv2506wE4A8wL73sk=";
     };
-    date = "2025-08-12";
+    date = "2025-08-15";
   };
   hammerspoon = {
     pname = "hammerspoon";
@@ -97,15 +97,15 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955";
+    version = "995c2e4581e0250a5b26f0e09293a96cae925cea";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955";
+      rev = "995c2e4581e0250a5b26f0e09293a96cae925cea";
       fetchSubmodules = false;
-      sha256 = "sha256-8fBcIGFV3F3q1Nj6xopZOVdhN14Vd51Gm+g0L07xlyI=";
+      sha256 = "sha256-3ZGpwE8zv/A1Mg57R7CgjwT8FHYBnxhTUcGH5rKf7Ag=";
     };
-    date = "2025-08-11";
+    date = "2025-08-15";
   };
   vivaldi-darwin = {
     pname = "vivaldi-darwin";
