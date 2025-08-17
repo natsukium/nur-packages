@@ -37,9 +37,42 @@ rec {
 
   my-firefox-addons = pkgs.recurseIntoAttrs (
     pkgs.callPackage ./pkgs/firefox-addons {
-      inherit (pkgs.callPackage "${sources.firefox-addons.src}/pkgs/firefox-addons" { })
-        buildFirefoxXpiAddon
-        ;
+      # buildFirefoxXpiAddon function vendored from https://gitlab.com/rycee/nur-expressions
+      # Original source: https://gitlab.com/rycee/nur-expressions/-/blob/master/pkgs/firefox-addons/default.nix
+      # Licensed under MIT License
+      # Copyright (c) Robert Helgesson
+      # Vendored to avoid "path is not valid" errors when running `nix flake check --no-build` in downstream flakes
+      buildFirefoxXpiAddon = pkgs.lib.makeOverridable (
+        {
+          pname,
+          version,
+          addonId,
+          url,
+          sha256,
+          meta,
+          ...
+        }:
+        pkgs.stdenv.mkDerivation {
+          name = "${pname}-${version}";
+
+          inherit meta;
+
+          src = pkgs.fetchurl { inherit url sha256; };
+
+          preferLocalBuild = true;
+          allowSubstitutes = true;
+
+          passthru = {
+            inherit addonId;
+          };
+
+          buildCommand = ''
+            dst="$out/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+            mkdir -p "$dst"
+            install -v -m644 "$src" "$dst/${addonId}.xpi"
+          '';
+        }
+      );
     }
   );
 
