@@ -56,10 +56,10 @@
     };
     "kiseppe-price-chart-kindle" = buildFirefoxXpiAddon {
       pname = "kiseppe-price-chart-kindle";
-      version = "2.0.10";
+      version = "2.0.11";
       addonId = "kiseppe_ff@example.com";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4425135/kiseppe_price_chart_kindle-2.0.10.xpi";
-      sha256 = "e1e07ea83213de51465a3823043bc4beb3c3e24b877035f765af633b2632af9a";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4557993/kiseppe_price_chart_kindle-2.0.11.xpi";
+      sha256 = "3ac33d68ba64386d55dd35e40eba019db6cb47ed1c67107b90de108822d66031";
       meta = with lib;
       {
         homepage = "https://yapi.ta2o.net/kndlsl/kiseppe/";
