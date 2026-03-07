@@ -28,15 +28,15 @@
   };
   emacs-plus = {
     pname = "emacs-plus";
-    version = "381d78cc95a0632facecd3270fa1e261179d6750";
+    version = "0dedfe306b373766f0a0401b7ba8e3a5623886dc";
     src = fetchFromGitHub {
       owner = "d12frosted";
       repo = "homebrew-emacs-plus";
-      rev = "381d78cc95a0632facecd3270fa1e261179d6750";
+      rev = "0dedfe306b373766f0a0401b7ba8e3a5623886dc";
       fetchSubmodules = false;
-      sha256 = "sha256-zFWsnr5FHzF416+ZlMSX97piXt+qOltQgVQQoxGls5Q=";
+      sha256 = "sha256-uUnTPl+finoOYPKlpM+HQS+LamntgaQ0vaH7IY2yFek=";
     };
-    date = "2026-03-05";
+    date = "2026-03-07";
   };
   hammerspoon = {
     pname = "hammerspoon";
@@ -48,15 +48,15 @@
   };
   paperwm-spoon = {
     pname = "paperwm-spoon";
-    version = "8a7ab83dd48b6d1b0e22359c41e788ef55871295";
+    version = "f86f76bae635307d6cb12c8d66693acff57cf82a";
     src = fetchFromGitHub {
       owner = "mogenson";
       repo = "PaperWM.spoon";
-      rev = "8a7ab83dd48b6d1b0e22359c41e788ef55871295";
+      rev = "f86f76bae635307d6cb12c8d66693acff57cf82a";
       fetchSubmodules = false;
-      sha256 = "sha256-PdG/fv2j4HMksePIEzWFaZHOP0OEvImh8sEEBwPLfd8=";
+      sha256 = "sha256-+mmvWshi619WqZFmmkua9gE28PWhpspUV/J2vNmKtKM=";
     };
-    date = "2026-02-10";
+    date = "2026-03-07";
   };
   qmk-toolbox = {
     pname = "qmk-toolbox";
@@ -76,25 +76,25 @@
   };
   sbarlua = {
     pname = "sbarlua";
-    version = "437bd2031da38ccda75827cb7548e7baa4aa9978";
+    version = "dba9cc421b868c918d5c23c408544a28aadf2f2f";
     src = fetchFromGitHub {
       owner = "FelixKratz";
       repo = "SbarLua";
-      rev = "437bd2031da38ccda75827cb7548e7baa4aa9978";
+      rev = "dba9cc421b868c918d5c23c408544a28aadf2f2f";
       fetchSubmodules = false;
-      sha256 = "sha256-F0UfNxHM389GhiPQ6/GFbeKQq5EvpiqQdvyf7ygzkPg=";
+      sha256 = "sha256-lhLTrdufA3ALJ2S5HLdgNOr5seWIWEHkVhZNPObzbvI=";
     };
-    date = "2024-08-12";
+    date = "2026-03-06";
   };
   skills-ref = {
     pname = "skills-ref";
-    version = "09055204dd51d3034a6dd9253b3de93d28cd7c3e";
+    version = "a3d02daa99ff01467e3bec94b038933416b7d8d8";
     src = fetchFromGitHub {
       owner = "agentskills";
       repo = "agentskills";
-      rev = "09055204dd51d3034a6dd9253b3de93d28cd7c3e";
+      rev = "a3d02daa99ff01467e3bec94b038933416b7d8d8";
       fetchSubmodules = false;
-      sha256 = "sha256-RdZlUAebsXYQ6zatVFZd0SaSHaIdODhFgzzDeAU7GTw=";
+      sha256 = "sha256-U5uizh1jcESVvmRHZL1vKWcoRwJjCwT23WQbP+Lo4zQ=";
     };
     date = "2026-03-05";
   };
