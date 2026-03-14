@@ -28,15 +28,15 @@
   };
   emacs-plus = {
     pname = "emacs-plus";
-    version = "381d78cc95a0632facecd3270fa1e261179d6750";
+    version = "707e967a0edd465f99ec82d5129c873e6a89ba73";
     src = fetchFromGitHub {
       owner = "d12frosted";
       repo = "homebrew-emacs-plus";
-      rev = "381d78cc95a0632facecd3270fa1e261179d6750";
+      rev = "707e967a0edd465f99ec82d5129c873e6a89ba73";
       fetchSubmodules = false;
-      sha256 = "sha256-zFWsnr5FHzF416+ZlMSX97piXt+qOltQgVQQoxGls5Q=";
+      sha256 = "sha256-qqtivPF8QZ90pyXG2tx/bY5orbp8Xnb+6LuVakyKVnA=";
     };
-    date = "2026-03-05";
+    date = "2026-03-14";
   };
   hammerspoon = {
     pname = "hammerspoon";
@@ -48,15 +48,15 @@
   };
   paperwm-spoon = {
     pname = "paperwm-spoon";
-    version = "8a7ab83dd48b6d1b0e22359c41e788ef55871295";
+    version = "5c3f35b870daa036fc03acc3dfe694ff7ea29963";
     src = fetchFromGitHub {
       owner = "mogenson";
       repo = "PaperWM.spoon";
-      rev = "8a7ab83dd48b6d1b0e22359c41e788ef55871295";
+      rev = "5c3f35b870daa036fc03acc3dfe694ff7ea29963";
       fetchSubmodules = false;
-      sha256 = "sha256-PdG/fv2j4HMksePIEzWFaZHOP0OEvImh8sEEBwPLfd8=";
+      sha256 = "sha256-mD+1HDw+20oDO/7iJtSZ8TgEL3DP56lYDX/DAXXbefU=";
     };
-    date = "2026-02-10";
+    date = "2026-03-12";
   };
   qmk-toolbox = {
     pname = "qmk-toolbox";
@@ -76,27 +76,27 @@
   };
   sbarlua = {
     pname = "sbarlua";
-    version = "437bd2031da38ccda75827cb7548e7baa4aa9978";
+    version = "dba9cc421b868c918d5c23c408544a28aadf2f2f";
     src = fetchFromGitHub {
       owner = "FelixKratz";
       repo = "SbarLua";
-      rev = "437bd2031da38ccda75827cb7548e7baa4aa9978";
+      rev = "dba9cc421b868c918d5c23c408544a28aadf2f2f";
       fetchSubmodules = false;
-      sha256 = "sha256-F0UfNxHM389GhiPQ6/GFbeKQq5EvpiqQdvyf7ygzkPg=";
+      sha256 = "sha256-lhLTrdufA3ALJ2S5HLdgNOr5seWIWEHkVhZNPObzbvI=";
     };
-    date = "2024-08-12";
+    date = "2026-03-06";
   };
   skills-ref = {
     pname = "skills-ref";
-    version = "09055204dd51d3034a6dd9253b3de93d28cd7c3e";
+    version = "36a4d328c047e1d331fa173cc46f193429ca7897";
     src = fetchFromGitHub {
       owner = "agentskills";
       repo = "agentskills";
-      rev = "09055204dd51d3034a6dd9253b3de93d28cd7c3e";
+      rev = "36a4d328c047e1d331fa173cc46f193429ca7897";
       fetchSubmodules = false;
-      sha256 = "sha256-RdZlUAebsXYQ6zatVFZd0SaSHaIdODhFgzzDeAU7GTw=";
+      sha256 = "sha256-Wi8+m2eO4AcgbwsIbeEmAGho50khApRghpO5df1JlnA=";
     };
-    date = "2026-03-05";
+    date = "2026-03-13";
   };
   skkeleton = {
     pname = "skkeleton";
@@ -112,18 +112,18 @@
   };
   vivaldi-darwin = {
     pname = "vivaldi-darwin";
-    version = "7.8.3925.76";
+    version = "7.8.3925.81";
     src = fetchurl {
-      url = "https://downloads.vivaldi.com/stable/Vivaldi.7.8.3925.76.universal.dmg";
-      sha256 = "sha256-SP+FEpfWE8lPsHu7NNAwhXYBgnqJ4dXa0z20rob+QYA=";
+      url = "https://downloads.vivaldi.com/stable/Vivaldi.7.8.3925.81.universal.dmg";
+      sha256 = "sha256-z6dtywlVwHYBJgtwiFkqszGfyMurf0HiJ8R1pqVlKZM=";
     };
   };
   zen-browser = {
     pname = "zen-browser";
-    version = "1.19.1b";
+    version = "1.19.2b";
     src = fetchurl {
-      url = "https://github.com/zen-browser/desktop/releases/download/1.19.1b/zen.macos-universal.dmg";
-      sha256 = "sha256-BLPN2LA57nsk4vm8NnnBYwHbJh6L4LMU78Vb2adE5sg=";
+      url = "https://github.com/zen-browser/desktop/releases/download/1.19.2b/zen.macos-universal.dmg";
+      sha256 = "sha256-m595vem8Sjgls3tiIr8AIYTbQtkPS6OMqY0+gkeJxgo=";
     };
   };
 }
