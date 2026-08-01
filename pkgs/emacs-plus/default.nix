@@ -2,6 +2,7 @@
   lib,
   source,
   emacs,
+  writeText,
 }:
 
 emacs.overrideAttrs (
@@ -10,6 +11,51 @@ emacs.overrideAttrs (
     emacsMajorVersion = lib.versions.major prevAttrs.version;
     emacsOlder = lib.versionOlder prevAttrs.version;
     emacsAtLeast = lib.versionAtLeast prevAttrs.version;
+
+    # Emacs Client.app is shipped by upstream from emacs 30 onwards
+    withClientApp = emacsAtLeast "30";
+
+    clientInfoPlist = writeText "emacs-client-Info.plist" (
+      lib.generators.toPlist { escape = true; } {
+        CFBundleDevelopmentRegion = "English";
+        CFBundleExecutable = "EmacsClient";
+        CFBundleIconFile = "Emacs.icns";
+        CFBundleIdentifier = "org.gnu.EmacsClient";
+        CFBundleInfoDictionaryVersion = "6.0";
+        CFBundleName = "Emacs Client";
+        CFBundleDisplayName = "Emacs Client";
+        CFBundleGetInfoString = "Emacs Client ${prevAttrs.version}";
+        CFBundlePackageType = "APPL";
+        CFBundleSignature = "????";
+        CFBundleShortVersionString = prevAttrs.version;
+        CFBundleVersion = prevAttrs.version;
+        LSApplicationCategoryType = "public.app-category.productivity";
+        NSHighResolutionCapable = true;
+        # upstream stamps the current year here, which would make the build
+        # depend on the clock
+        NSHumanReadableCopyright = "Copyright (C) Free Software Foundation, Inc.";
+        CFBundleDocumentTypes = [
+          {
+            CFBundleTypeRole = "Editor";
+            CFBundleTypeName = "Text Document";
+            LSItemContentTypes = [
+              "public.text"
+              "public.plain-text"
+              "public.source-code"
+              "public.script"
+              "public.shell-script"
+              "public.data"
+            ];
+          }
+        ];
+        CFBundleURLTypes = [
+          {
+            CFBundleURLName = "Org Protocol";
+            CFBundleURLSchemes = [ "org-protocol" ];
+          }
+        ];
+      }
+    );
   in
   {
     pname = "emacs-plus";
@@ -36,6 +82,26 @@ emacs.overrideAttrs (
       (lib.withFeatureAs true "xml2" "yes")
       (lib.withFeatureAs true "gnutls" "yes")
     ];
+
+    postInstall =
+      (prevAttrs.postInstall or "")
+      + lib.optionalString withClientApp ''
+        # Emacs.app is absent unless the NS port was built
+        if [ -d "$out/Applications/Emacs.app" ]; then
+          clientApp="$out/Applications/Emacs Client.app"
+          mkdir -p "$clientApp/Contents/MacOS" "$clientApp/Contents/Resources"
+
+          $CC -O2 -Wall -fobjc-arc -framework AppKit \
+            -DEMACSCLIENT="\"$out/bin/emacsclient\"" \
+            -o "$clientApp/Contents/MacOS/EmacsClient" \
+            ${./emacs-client.m}
+
+          cp "$out/Applications/Emacs.app/Contents/Resources/Emacs.icns" \
+            "$clientApp/Contents/Resources/Emacs.icns"
+          cp ${clientInfoPlist} "$clientApp/Contents/Info.plist"
+          printf 'APPL????' > "$clientApp/Contents/PkgInfo"
+        fi
+      '';
 
     meta = prevAttrs.meta // {
       description = "A wide range of extra functionality over regular Emacs for macOS";
